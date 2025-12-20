@@ -10,6 +10,17 @@
 
 **Department of Electrical and Computer Engineering**
 
+---
+## Table of Contents
+- [Introduction](#introduction)
+- [Block Diagram](#block-diagram)
+- [Results and Video Demonstration Links](#results-and-video-demonstration-links)
+- [Background and Methodology](#background-and-methodology)
+- [Components Used](#components-used)
+- [Pinout](#pinout)
+
+---
+
 ## Introduction
 
 The objective of this project is to design and implement an autonomous rover capable of navigating its environment while simultaneously performing real-time object detection. By combining low-level embedded motor control with high-level computer vision processing, this project demonstrates the integration of multiple embedded platforms to solve a complex, real-world problem. \
@@ -19,9 +30,18 @@ An autonomous rover built as **two parallel subsystems**:
 - **Raspberry Pi 4**: real-time object detection (OpenCV DNN) + plays an associated audio clip (ELMO voiceline) when supported objects are detected.
 - **TM4C123 (Tiva C LaunchPad)**: motor control + ultrasonic obstacle avoidance + OLED status display.
 
+
 ---
 
-## Demo Summary (What it does)
+## Background and Methodology
+
+This project applies several core embedded systems concepts, including PWM-based motor control, ultrasonic distance sensing, and real-time computer vision. The TM4C123 microcontroller uses PWM outputs to regulate motor speed and GPIO control for direction, while ultrasonic measurements are used to detect obstacles and determine navigation behavior. An OLED display provides real-time system feedback.
+
+On the perception side, the Raspberry Pi uses OpenCV’s Deep Neural Network module with a pre-trained YOLOv3-tiny model to perform object detection on live camera input. Detected objects trigger audio feedback, demonstrating edge-based machine learning and real-time multimedia processing.
+
+---
+
+## Results and Video Demonstration Links
 
 ### Raspberry Pi subsystem
 - Captures frames from a USB webcam.
@@ -40,6 +60,12 @@ An autonomous rover built as **two parallel subsystems**:
   - stop and show WAITING when blocked
   - if still blocked, perform turn-left pulses until clear
 
+
+### Video Demonstration:
+Clip 1 [00:19]: https://youtube.com/shorts/MlB6wst_93M  \
+Clip 2 [00:41]: https://youtu.be/d14usDj3cW0
+
+
 ### Block Diagram:
 ![Block Diagram](images/ECE425_block_diagram_final_project.png)
 
@@ -51,7 +77,7 @@ An autonomous rover built as **two parallel subsystems**:
 
 ## Hardware
 
-### Components
+### Components Used
 | Component | Purpose |
 |---|---|
 | TM4C123GH6PM LaunchPad | Motor control, ultrasonic sensing, OLED display |
@@ -64,7 +90,7 @@ An autonomous rover built as **two parallel subsystems**:
 
 ---
 
-## Wiring / Pin Mapping (TM4C)
+## Pinout
 
 ### Motors (TB6612FNG)
 | Motor | Signal | TM4C Pin | Notes |
@@ -90,10 +116,5 @@ An autonomous rover built as **two parallel subsystems**:
 | VCC | 3.3V |
 | GND | GND |
 
----
-
-## Video Demonstration:
-Clip 1 [00:19]: https://youtube.com/shorts/MlB6wst_93M  \
-Clip 2 [00:41]: https://youtu.be/d14usDj3cW0
 
 ---
