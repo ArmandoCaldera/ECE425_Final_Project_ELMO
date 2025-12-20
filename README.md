@@ -1,5 +1,7 @@
 # Object Detecting Autonomous RC Car (ECE 425 Final Project)
 
+##Introduction
+
 An autonomous rover built as **two parallel subsystems**:
 
 - **Raspberry Pi 4**: real-time object detection (OpenCV DNN) + plays an associated audio clip (ELMO voiceline) when supported objects are detected.
