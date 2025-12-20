@@ -1,0 +1,57 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+
+# Python ML / runtime
+*.log
+*.onnx
+*.pbtxt
+
+# Embedded build outputs
+*.o
+*.obj
+*.out
+*.axf
+*.elf
+*.map
+*.lst
+*.d
+*.dep
+
+Debug/
+Release/
+Objects/
+Listings/
+
+# Keil
+*.uvguix.*
+*.uvoptx
+*.uvprojx
+*.scvd
+*.crun
+
+# Optional large generated files
+# *.wav
+# *.weights
+
+# Keep
+!README.md
+!.gitignore
