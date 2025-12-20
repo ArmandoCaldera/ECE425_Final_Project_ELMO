@@ -13,9 +13,10 @@
 ---
 ## Table of Contents
 - [Introduction](#introduction)
-- [Block Diagram](#block-diagram)
-- [Results and Video Demonstration Links](#results-and-video-demonstration-links)
 - [Background and Methodology](#background-and-methodology)
+- [Results and Video Demonstration Links](#results-and-video-demonstration-links)
+- [Block Diagram](#block-diagram)
+- [State Diagram](#state-diagram)
 - [Components Used](#components-used)
 - [Pinout](#pinout)
 
